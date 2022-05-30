@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Text Input</title>
+    
+
+</head>
+<body>
+    
+    <form action="#">
+        <p>Input Text</p>
+        <label for="first_name" class="">First Name </label>
+        <input type="text" name="first_name" id="first_name" placeholder="Enter Name ">    
+
+        <button type="button" onclick="myFunction()">Clicke me</button>
+    </form>
+    <div id="label">
+
+    </div>
+
+    <div class="div_1">
+
+    </div>
+
+    <div class="div_2">
+
+    </div>
+
+    <div class="text area">
+        <p>Text Area </p>
+        <label for="comment" class="">Write Out </label>
+        <textarea name="comment" id="comments" cols="30" rows="10"></textarea>
+    </div>
+
+
+    <div class="selectBox">
+        <select name="course" id="course">
+            <option value="MCA" > Master of Computer Science</option>
+            <option value="B.Tech" > Bachelor of Computer Engineering </option>
+            <option value="M.tech" > Master of Computer Science</option>
+        </select>
+
+        <p id="selectedCourse">
+
+        </p>
+    </div>
+
+
+    <div class="checkbox_div">
+        <input type="checkbox" name="valid boxes" id="isCarLoan"> Is Car Loan provided
+        <p id="carLoanPara">
+
+        </p>
+    </div>
+
+
+    <div class="radiobutton_div">
+        <p>Chose Location</p>
+        <input type="radio" name="city" value="Lucknow" checked> Lucknow
+        <input type="radio" name="city" value="Bangalore" > Bangalore
+    </div>
+
+    
+</body>
+
+<script>
+      
+    // Here the value is stored in new variable x 
+    function myFunction() {
+        var x = document.getElementById("first_name").value;
+        document.getElementById("label").innerHTML = x;
+    }
+
+    //Adding Text in the Query Div
+    const div_1_dom = document.querySelector(".div_1")
+    div_1_dom.innerHTML = '<h3> Hello </h3>'
+
+    //apppend a childe node
+
+    const div_2_dom = document.querySelector(".div_2")
+    const para = document.createElement('p')
+    para.innerText = 'This is a randome text'
+    div_2_dom.appendChild(para)
+
+
+    //manupulating comment text
+    const comment_dom = document.querySelector("#comments")
+    comment_dom.textContent = 'random text random text'
+
+
+    //checking the onSelect for a combo box 
+    //add event listner
+    const course_dom = document.querySelector("#course")
+    course_dom.addEventListener('change',(event)=>{
+        const selectedCourseDom = document.querySelector("#selectedCourse")
+        const seletedCourseValue = event.target.value;
+        selectedCourseDom.textContent = "You have chosen "+ seletedCourseValue
+
+        var selectBox = document.getElementById("course");
+        var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+        console.log(selectedValue)
+    });
+
+    const isCarLoanVar = document.querySelector("#isCarLoan")
+    isCarLoanVar.addEventListener('click',(event)=>{
+        console.log("Clicked")
+        const isLoanSelectedText = document.querySelector("#carLoanPara")
+        isLoanSelectedText.textContent = "Car Loan is Selected "
+
+        if(event.target.checked){
+            console.log("The check box is selected ")
+        }else{
+            console.log("The check box is not selected")
+        }
+    });
+
+
+
+    </script>
+</html>

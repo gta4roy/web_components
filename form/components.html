@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheat Sheet</title>
+</head>
+<body>
+
+    <h3>Forms Basic Components </h3>
+   
+    <form action="#">
+        <p>Input Text</p>
+        <label for="first_name" class="">First Name </label>
+        <input type="text" name="first_name" id="" placeholder="Enter Name ">    
+   
+
+        <p>Passord Text</p>
+        <label for="password" class="">Password </label>
+        <input type="password" name="password" id=""/>    
+
+        <p>Text Area </p>
+        <label for="comment" class="">Write Out </label>
+        <textarea name="comment" id="" cols="30" rows="10"></textarea>
+    
+        <p>Select </p>
+        <label for="course" class="">Select A course  </label>
+
+        <select name="course">
+            <option value="MCA" > Master of Computer Science</option>
+            <option value="B.Tech" > Bachelor of Computer Engineering </option>
+            <option value="M.tech" > Master of Computer Science</option>
+        </select>
+
+        <label for="course2"> Choose a Course</label>
+        <select name="course2" size="3">
+            <option value="MCA" > Master of Computer Science</option>
+            <option value="B.Tech" > Bachelor of Computer Engineering </option>
+            <option value="M.tech" > Master of Computer Science</option>
+            <option value="MCA" > Master of Computer Science</option>
+            <option value="B.Tech" > Bachelor of Computer Engineering </option>
+            <option value="M.tech" > Master of Computer Science</option>
+        </select>
+        <hr>
+        <br>
+        <label for="course3"> Choose multiple Course</label>
+        <select name="course3" size="3" multiple>
+            <option value="MCA" > Master of Computer Science</option>
+            <option value="B.Tech" > Bachelor of Computer Engineering </option>
+            <option value="M.tech" > Master of Computer Science</option>
+            <option value="MCA" > Master of Computer Science</option>
+            <option value="B.Tech" > Bachelor of Computer Engineering </option>
+            <option value="M.tech" > Master of Computer Science</option>
+        </select>
+
+        <p> Check Box</p>
+        <input type="checkbox" name="valid boxes" checked="checked" > India
+        <input type="checkbox" name="valid boxes" > Pakistan
+        <input type="checkbox" name="valid boxes" > Shri Lanka 
+        <input type="checkbox" name="valid boxes" > Aus
+        <input type="checkbox" name="valid boxes" > Engineering
+
+        <p>Radio Buttons </p>
+        <input type="radio" name="weapon" value="throwing starts" > Throwing Stars
+        <input type="radio" name="weapon" value="Sword" > Sword
+        <input type="radio" name="weapon" value="staff" > Staff
+        
+        <br>
+        <p>Chose Location</p>
+        <input type="radio" name="city" value="Lucknow" checked> Lucknow
+        <input type="radio" name="city" value="Bangalore" > Bangalore
+
+
+        <br>
+
+        <p> File Input</p>
+        <input type="file" name="image">
+
+        <input type="submit" value="Submit The form">
+
+        <hr>
+        <h3>LEGEND</h3>
+        <fieldset>
+            <legend>Personalia</legend>
+            <label for="fname">First Name</label> <br>
+            <input type="text" id="fname" name="fname" value="John" > <br>
+            <label for="lname">Last Name</label> <br>
+            <input type="text" id="lname" name="lname" value="Roy" > <br>
+            <input type="button" value="save">
+        </fieldset>
+
+    </form>
+    
+</body>
+</html>
